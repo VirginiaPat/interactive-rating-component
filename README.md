@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/VirginiaPat/interactive-rating-component.git)
+- Live Site URL: [Netlify](https://rate-component-virgi.netlify.app/)
 
 ## My process
 
