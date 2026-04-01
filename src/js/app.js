@@ -19,8 +19,9 @@ const init = () => {
 const setupEventListeners = () => {
   // Rating numbers buttons
   const allNumbersBtns = document.querySelectorAll(".rate-number");
-  allNumbersBtns.forEach((button) => {
+  allNumbersBtns.forEach((button, index) => {
     button.addEventListener("click", handleRateSelection);
+    button.addEventListener("keydown", (e) => handleRateKeydown(e, index));
   });
 
   // Submit button
@@ -75,6 +76,28 @@ const handleRateSelection = (event) => {
   UI.hideStarImgs(); //in case there are visible star images hide them
   UI.showStarImages(visibleStarImgs);
   UI.hideErrorMessage();
+};
+
+/**
+ *
+ * @param {event} e
+ * @param {} index
+ */
+const handleRateKeydown = (e, index) => {
+  const allNumbersBtns = document.querySelectorAll(".rate-number");
+  if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+    e.preventDefault();
+    const next = allNumbersBtns[index + 1] ?? allNumbersBtns[0];
+    next.focus();
+    next.click();
+  }
+  if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+    e.preventDefault();
+    const prev =
+      allNumbersBtns[index - 1] ?? allNumbersBtns[allNumbersBtns.length - 1];
+    prev.focus();
+    prev.click();
+  }
 };
 
 /**

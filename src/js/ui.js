@@ -150,6 +150,8 @@ export const showErrorMessage = () => {
 export const showThankYouPopup = () => {
   elements.thankYouPopup.classList.remove("hidden");
   elements.thankYouPopup.classList.add("flex");
+  elements.thankYouPopup.setAttribute("tabindex", "-1");
+  elements.thankYouPopup.focus();
 };
 
 /**
