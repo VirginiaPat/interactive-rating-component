@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./index.css" type="text/css" rel="stylesheet" />
+    <script type="module" src="./js/app.js"></script>
+
+    <title>Interactive rating component</title>
+  </head>
+  <body
+    class="font-overpass flex flex-col justify-center items-center bg-grey-950 lg:h-screen"
+  >
+    <!-- STARS CONTAINER -->
+    <header class="sr-only">Interactive rating component</header>
+    <main>
+      <!-- RATE AND SUMBIT CONTAINER- VISIBLE AND INVISIBLE AFTER SUBMIT -->
+      <section
+        id="rate-submit-section"
+        aria-label="Rate and submit your feedback"
+        class="flex flex-col gap-6 p-6 ml-6 mr-6 mt-6 rounded-2xl bg-radial from-blue-900 to-blue-950 md:gap-8 md:p-8 md:ml-0 md:mr-0 md:w-103 lg:mt-0"
+      >
+        <!-- STAR CONTAINER -->
+        <div class="flex items-center justify-between">
+          <div
+            id="star-1"
+            class="star-img invisible flex justify-center items-center w-10 h-10 rounded-full bg-grey-900 md:w-12 md:h-12"
+          >
+            <img
+              class="w-3.5 md:w-4"
+              src="../images/icon-star.svg"
+              alt="evaluation star"
+            />
+          </div>
+          <div
+            id="star-2"
+            class="star-img invisible flex justify-center items-center w-10 h-10 rounded-full bg-grey-900 md:w-12 md:h-12"
+          >
+            <img
+              class="w-3.5 md:w-4"
+              src="../images/icon-star.svg"
+              alt="evaluation star"
+            />
+          </div>
+          <div
+            id="star-3"
+            class="star-img invisible flex justify-center items-center w-10 h-10 rounded-full bg-grey-900 md:w-12 md:h-12"
+          >
+            <img
+              class="w-3.5 md:w-4"
+              src="../images/icon-star.svg"
+              alt="evaluation star"
+            />
+          </div>
+          <div
+            id="star-4"
+            class="star-img invisible flex justify-center items-center w-10 h-10 rounded-full bg-grey-900 md:w-12 md:h-12"
+          >
+            <img
+              class="w-3.5 md:w-4"
+              src="../images/icon-star.svg"
+              alt="evaluation star"
+            />
+          </div>
+          <div
+            id="star-5"
+            class="star-img invisible flex justify-center items-center w-10 h-10 rounded-full bg-grey-900 md:w-12 md:h-12"
+          >
+            <img
+              class="w-3.5 md:w-4"
+              src="../images/icon-star.svg"
+              alt="evaluation star"
+            />
+          </div>
+        </div>
+
+        <!-- TEXTS & NUMBERS CONATINER -->
+        <div class="flex flex-col gap-4">
+          <h1
+            class="font-bold text-2xl leading-7.5 tracking-normal text-white md:text-28px md:leading-8.75"
+          >
+            How did we do?
+          </h1>
+          <p
+            class="font-normal text-sm leading-5.5 tracking-normal text-grey-500 md:text-15px md:leading-6"
+          >
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <div
+            role="radiogroup"
+            aria-label="Feedback rating from 1 to 5"
+            class="flex justify-between"
+          >
+            <button
+              id="number-1"
+              data-rate="1"
+              data-selected="false"
+              aria-label="Select feedback number: 1 out of 5"
+              role="radio"
+              aria-checked="false"
+              class="rate-number flex justify-center items-center w-10.5 h-10.5 rounded-full bg-grey-900 cursor-pointer transition-all duration-500 group hover:bg-white focus:bg-orange-500 md:w-12.75 md:h-12.75"
+            >
+              <span
+                class="font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-500 group-hover:text-grey-900 group-focus:text-grey-900 group-active:text-grey-900 md:text-base md:leading-6 md:tracking-[0.2px]"
+                >1</span
+              >
+            </button>
+            <button
+              id="number-2"
+              data-rate="2"
+              data-selected="false"
+              aria-label="Select feedback number: 2 out of 5"
+              role="radio"
+              aria-checked="false"
+              class="rate-number flex justify-center items-center w-10.5 h-10.5 rounded-full bg-grey-900 cursor-pointer transition-all duration-500 group hover:bg-white focus:bg-orange-500 md:w-12.75 md:h-12.75"
+            >
+              <span
+                class="font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-500 group-hover:text-grey-900 group-focus:text-grey-900 group-active:text-grey-900 md:text-base md:leading-6 md:tracking-[0.2px]"
+                >2</span
+              >
+            </button>
+            <button
+              id="number-3"
+              data-rate="3"
+              data-selected="false"
+              aria-label="Select feedback number: 3 out of 5"
+              role="radio"
+              aria-checked="false"
+              class="rate-number flex justify-center items-center w-10.5 h-10.5 rounded-full bg-grey-900 cursor-pointer transition-all duration-500 group hover:bg-white focus:bg-orange-500 md:w-12.75 md:h-12.75"
+            >
+              <span
+                class="font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-500 group-hover:text-grey-900 group-focus:text-grey-900 group-active:text-grey-900 md:text-base md:leading-6 md:tracking-[0.2px]"
+                >3</span
+              >
+            </button>
+            <button
+              id="number-4"
+              data-rate="4"
+              data-selected="false"
+              aria-label="Select feedback number: 4 out of 5"
+              role="radio"
+              aria-checked="false"
+              class="rate-number flex justify-center items-center w-10.5 h-10.5 rounded-full bg-grey-900 cursor-pointer transition-all duration-500 group hover:bg-white focus:bg-orange-500 md:w-12.75 md:h-12.75"
+            >
+              <span
+                class="font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-500 group-hover:text-grey-900 group-focus:text-grey-900 group-active:text-grey-900 md:text-base md:leading-6 md:tracking-[0.2px]"
+                >4</span
+              >
+            </button>
+            <button
+              id="number-5"
+              data-rate="5"
+              data-selected="false"
+              aria-label="Select feedback number: 5 out of 5"
+              role="radio"
+              aria-checked="false"
+              class="rate-number flex justify-center items-center w-10.5 h-10.5 rounded-full bg-grey-900 cursor-pointer transition-all duration-500 group hover:bg-white focus:bg-orange-500 md:w-12.75 md:h-12.75"
+            >
+              <span
+                class="font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-500 group-hover:text-grey-900 group-focus:text-grey-900 group-active:text-grey-900 md:text-base md:leading-6 md:tracking-[0.2px]"
+                >5</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <div class="flex flex-col gap-2">
+          <button
+            id="submit-button"
+            type="button"
+            aria-label="Submit rating"
+            aria-describedby="submit-help"
+            class="flex justify-center items-center p-4 rounded-l-full rounded-r-full bg-orange-500 cursor-pointer transition-all duration-500 hover:bg-white focus:bg-white active:bg-white"
+          >
+            <span
+              class="uppercase font-bold text-sm leading-4.5 tracking-[1.87px] text-grey-950 md:font-semibold md:leading-6 md:tracking-[0.17px]"
+              >submit</span
+            >
+          </button>
+          <p
+            id="submit-help"
+            aria-live="assertive"
+            class="hidden text-white justify-center"
+          >
+            Please give us at least one star
+          </p>
+        </div>
+      </section>
+      <!-- THANK YOU CONTAINER. INVISIBLE AND VISIBLE AFTER SUBMIT -->
+      <section
+        id="thank-you-section"
+        aria-label="Thank you for rating"
+        class="hidden flex-col items-center gap-6 pt-8 pb-8 pl-6 pr-6 ml-6 mr-6 mt-6 rounded-2xl bg-radial from-blue-900 to-blue-950 md:gap-8 md:pt-10 md:pb-10 md:pl-8 md:pr-8 md:ml-0 md:mr-0 md:w-103 lg:mt-0"
+      >
+        <div>
+          <img
+            class="h-24 md:h-27"
+            src="../images/illustration-thank-you.svg"
+            alt=""
+          />
+        </div>
+        <div class="bg-grey-900 pl-4 pr-4 rounded-l-full rounded-r-full">
+          <p
+            class="font-normal text-sm leading-5.5 tracking-normal text-orange-500 md:text-15px md:leading-6"
+          >
+            You selected <span id="selected-rate">4</span> out of 5
+          </p>
+        </div>
+        <div class="flex flex-col gap-4 items-center justify-center">
+          <h2
+            class="font-bold text-2xl leading-7.5 tracking-normal text-white md:text-28px md:leading-8.75"
+          >
+            Thank you!
+          </h2>
+          <p
+            class="text-center font-normal text-sm leading-5.5 tracking-normal text-grey-500 md:text-15px md:leading-6"
+          >
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER--------------------------------------------------------- -->
+    <footer class="z-10 mt-5">
+      <div
+        aria-label="Challenge and author credits"
+        class="font-normal text-sm leading-5.5 tracking-normal text-grey-500 text-center pb-8"
+      >
+        Challenge by
+        <a
+          class="text-orange-500 focus:text-orange-300 hover:text-orange-300 active:text-orange-100"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor.</a
+        ><br />
+        Coded by
+        <a
+          class="text-orange-500 focus:text-orange-300 hover:text-orange-300 active:text-orange-100"
+          href="https://www.frontendmentor.io/profile/VirginiaPat"
+          target="_blank"
+          >Virginia Patrika.</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

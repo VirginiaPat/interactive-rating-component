@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-grey-950: #131518;
+  --color-grey-900: #262e38;
+  --color-grey-500: #969fad;
+  --color-orange-500: #fc7614;
+  --color-blue-900: #232a34;
+  --color-blue-950: #181e27;
+
+  --font-overpass: "Overpass", sans-serif;
+
+  --text-28px: 1.75rem;
+  --text-15px: 0.9375rem;
+  --text-22px: 1.375rem;
+
+  /* custom breakpoin:460px */
+  --breakpoint-md: 28.75rem;
+}
